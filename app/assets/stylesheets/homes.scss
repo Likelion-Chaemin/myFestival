@@ -1,0 +1,184 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bulma";
+
+
+.container_fluid{
+  width: 100vw;
+  height: 300vh;
+}
+
+.hero{
+  overflow: visible;
+  .hero-head{
+    height: 8vh;
+    background-color: #fff;
+    overflow: inherit;
+    .nav{
+      height: 100%;
+      overflow: inherit;
+      .container{
+        height: 100%;
+        overflow: visible;
+        .nav-left{
+          overflow: visible;
+          .nav-item{
+            padding: 0;
+            overflow: inherit;
+            .logo{
+              max-height: 4rem;
+            }
+          }
+          .tabs{
+            overflow: visible;
+            ul{
+              margin-left: 2rem;
+              li{
+                a{
+                  color: #000 !important;
+                }
+              }
+            }
+          }
+        }
+        .nav-right{
+          .nav-item{
+            color: #000 !important;
+          }
+          .has-addons{
+            margin: 0 2rem 0 0;
+          }
+          .control{
+            .button{
+              background-color: #FFF;
+              border: 1px solid #aaa;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .hero-body{
+    height: 70vh;
+    background-image: url('festival1.jpg');
+    background-size: cover;
+
+    .container{
+      .title{
+        font-size: 3rem;
+        font-weight: 700;
+        font-family: 'LotteMartDream';
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+      .subtitle{
+        color: #fff;
+        font-size: 1.75rem;
+        padding-top: 1rem;
+        font-weight: 500;
+        font-family: 'LotteMartDream';
+        text-shadow: -0.6px 0 black, 0 0.6px black, 0.6px 0 black, 0 -0.6px black;
+      }
+    }
+  }
+}
+form{
+  height: 5.8vh;
+  margin: 1rem 0 1rem 0;
+  .field_search{
+    height: 100%;
+    .container_search{
+      width: 80%;
+      height: 100%;
+      .field-body{
+        height: 100%;
+        .field{
+          margin: 0;
+          height: 100%;
+          .control{
+            height: 100%;
+            .input{
+              height: 100%;
+              border-radius: 0;
+              box-shadow: none;
+            }
+            .input_to{
+              border-left: 0px !important;
+              border-right: 0px !important;
+            }
+            .input_where{
+              border-right: 0px !important;
+            }
+            .button{
+              height: 100%;
+              background-color: #EA3E3F;
+              width: 6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.field_hot{
+  margin-top: 1rem;
+  .hot_festival_text{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+}
+
+
+
+
+
+// 폰트
+
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 400;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 700;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+}
+
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 300;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+}
