@@ -86,7 +86,7 @@
 }
 form{
   height: 5.8vh;
-  margin: 1rem 0 1rem 0;
+  margin: 2rem 0 2rem 0;
   .field_search{
     height: 100%;
     .container_search{
@@ -124,19 +124,41 @@ form{
 }
 
 .field_hot{
-  margin-top: 1rem;
+  height: 130vh;
+  border-top: 3px solid #eee;
+  border-bottom: 3px solid #eee;
+  overflow: hidden;
   .hot_festival_text{
     text-align: center;
     font-size: 1.5rem;
-    padding-top: 1rem;
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+    font-family: 'LotteMartDream';
+  }
+  .columns_hot{
+    height: 35%;
+    margin: 0;
+    padding: 0 3rem 0 3rem;
+    .column{
+      padding: 0;
+    }
+  }
+  .festivals_pick{
+
+  }
+  .columns_pick{
+    height: 30%;
+    margin: 0;
+    padding: 0 3rem 0 3rem;
+    .column{
+      padding: 0;
+    }
   }
 }
 
 
 
-
-
-// 폰트
+// 폰트 import
 
 @font-face {
  font-family: 'NanumBarunGothic';
