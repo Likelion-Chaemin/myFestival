@@ -1,4 +1,4 @@
-<form action="" method="post">
+<form action="homes/search" method="post">
   <div class="field field_search is-horizontal">
     <div class="container container_search">
       <div class="field-body">
@@ -33,12 +33,23 @@
             <!-- 어떤축제 -->
             <div class="field">
               <p class="control is-expanded has-icons-left has-icons-right">
-                <input class="input input_what" type="text" placeholder="어떤축제" name="input_what">
-                <span class="icon is-small is-left">
-                  <i class="fa fa-birthday-cake" aria-hidden="true"></i>
-                </span>
+                <select class="input input_what" name="input_what" >
+                  <option disabled selected hidden>
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      어떤축제
+                    </span>
+                  </option>
+                  <option value="음악">음악</option>
+                  <option value="음식">음식</option>
+                  <option value="지역축제">지역축제</option>
+                  <option value="예술">예술</option>
+                  <option value="전통">전통</option>
+                </select>
+
               </p>
             </div>
+
             <div class="field">
               <p class="control">
                 <button class="button is-info">
@@ -52,6 +63,7 @@
 </form>
 
 <script type="text/javascript">
+//달력
   $( function() {
     $( ".datepicker" ).datepicker({onSelect : function(){
       var from = $('.input_from').val();
@@ -59,6 +71,8 @@
 
       if (Date.parse(from) - Date.parse(to) > 0)
         alert('날짜를 다시 선택해주세요');
-    }});  
+    }});
   });
+
+
 </script>

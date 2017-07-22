@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170722131804) do
     t.string "title"
     t.string "location"
     t.string "venue"
-    t.string "type"
+    t.string "category"
     t.date "start_date"
     t.date "end_date"
     t.string "contact"
