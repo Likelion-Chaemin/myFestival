@@ -14,8 +14,71 @@
 
 
   </head>
-
   <body>
+    <section class="hero is-primary is-medium">
+      <!-- Hero header: will stick at the top -->
+      <div class="hero-head">
+        <!-- 네비게이션 바 start-->
+        <header class="nav">
+          <div class="container">
+            <!-- 네비게이션 바 왼쪽 start -->
+            <div class="nav-left">
+              <a class="nav-item">
+                <%= image_tag 'logo2.png', class: :logo%>
+              </a>
+              <nav class="tabs">
+                <ul>
+                  <li><a href="#">국내</a></li>
+                  <li><a href="#">아시아</a></li>
+                  <li><a href="#">유럽</a></li>
+                  <li><a href="#">아메리카</a></li>
+                  <li><a href="#">오세아니아</a></li>
+                  <li><a href="#">아프리카</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!-- 네비게이션바 왼쪽 end -->
+            <!-- 네비게이션바 오른쪽 start -->
+            <div class="nav-right nav-menu">
+              <div class="nav-item field has-addons">
+                <div class="control searchbar">
+                  <input class="input is-hovered is-loading" type="text" placeholder="키워드로 검색하세요">
+                </div>
+                <div class="control has-icons-right">
+                  <!-- 서치바 경로지정 필요 -->
+                  <a href="#">
+                    <div class="control">
+                      <button type="submit" class="button">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 로그인 회원가입 및 유저 프로필 부분을 버거 안으로!
+              로그인이 되면 로그아웃으로 바뀌게 하기 + 리뷰 캘린더 포럼 링크 생기게 하기
+              <a href="#" class="nav-item">
+                로그인
+              </a>
+              <a href="#" class="nav-item">
+                회원가입
+              </a>
+              버거 안으로 -->
+              <div class="burger nav-item">
+                  <i class="fa fa-bars" aria-hidden="true"></i>
+              </div>
+            </div>
+            <!-- 네비게이션바 오른쪽 end -->
+    
+    
+    
+          </div>
+    
+        </header>
+        <!-- 네비게이션 바 end -->
+    
+      </div>
+    </section>
     <%= yield %>
   </body>
 </html>

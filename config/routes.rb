@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
+  get 'homes/index'
+  get 'homes/search'
 
   post 'homes/search' => 'homes#search_result'
 
