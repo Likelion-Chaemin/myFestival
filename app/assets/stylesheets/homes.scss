@@ -63,8 +63,6 @@
 
   .hero-body{
     height: 70vh;
-    background-image: url('festival1.jpg');
-    background-size: cover;
 
     .container{
       .title{
@@ -94,6 +92,7 @@ form{
       height: 100%;
       .field-body{
         height: 100%;
+        padding-left: 2px;
         .field{
           margin: 0;
           height: 100%;
@@ -103,18 +102,21 @@ form{
               height: 100%;
               border-radius: 0;
               box-shadow: none;
+
+            }
+            .input_from{
             }
             .input_to{
-              border-left: 0px !important;
-              border-right: 0px !important;
             }
             .input_where{
-              border-right: 0px !important;
+            }
+            .input_what{
             }
             .button{
+              border-collapse: collapse;
               height: 100%;
               background-color: #EA3E3F;
-              width: 6rem;
+              width: 100%;
             }
           }
         }
