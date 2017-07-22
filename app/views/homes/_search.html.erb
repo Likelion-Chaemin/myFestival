@@ -6,7 +6,7 @@
         <!-- 언제부터 -->
           <div class="field">
               <p class="control is-expanded has-icons-left">
-                <input class="input input_from" type="text" placeholder="언제부터">
+                <input class="input input_from datepicker" type="text" placeholder="언제부터" name="input_from">
                 <span class="icon is-small is-left">
                   <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                 </span>
@@ -15,7 +15,7 @@
             <!-- 언제까지 -->
             <div class="field">
               <p class="control is-expanded has-icons-left has-icons-right">
-                <input class="input input_to" type="text" placeholder="언제까지" value="">
+                <input class="input input_to datepicker" type="text" placeholder="언제까지" name="input_to">
                 <span class="icon is-small is-left">
                   <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                 </span>
@@ -24,7 +24,7 @@
             <!-- 어디에서 -->
             <div class="field">
               <p class="control is-expanded has-icons-left has-icons-right">
-                <input class="input input_where" type="text" placeholder="어디서" value="">
+                <input class="input input_where" type="text" placeholder="어디서" name="input_where">
                 <span class="icon is-small is-left">
                   <i class="fa fa-map-marker" aria-hidden="true"></i>
                 </span>
@@ -33,7 +33,7 @@
             <!-- 어떤축제 -->
             <div class="field">
               <p class="control is-expanded has-icons-left has-icons-right">
-                <input class="input input_what" type="text" placeholder="어떤축제" value="">
+                <input class="input input_what" type="text" placeholder="어떤축제" name="input_what">
                 <span class="icon is-small is-left">
                   <i class="fa fa-birthday-cake" aria-hidden="true"></i>
                 </span>
@@ -50,3 +50,15 @@
     </div>
   </div>
 </form>
+
+<script type="text/javascript">
+  $( function() {
+    $( ".datepicker" ).datepicker({onSelect : function(){
+      var from = $('.input_from').val();
+      var to = $('.input_to').val();
+
+      if (Date.parse(from) - Date.parse(to) > 0)
+        alert('날짜를 다시 선택해주세요');
+    }});  
+  });
+</script>
