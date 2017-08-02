@@ -3,15 +3,12 @@ class HomesController < ApplicationController
   end
 
   def search
-
-    @input_from = Date.strptime(params[:input_from], '%m/%d/%Y')
     @input_to = Date.strptime(params[:input_to], '%m/%d/%Y')
+    @input_from = Date.strptime(params[:input_from], '%m/%d/%Y')
     @input_where = params[:input_where]
-    @input_what = params[:input_what]
-
-    render 'search_result'
-
+    what = params[:input_what]
+    @input_what = what.strip
+    @result = Festival.where('start_date <= ? or end_date >= ?', @input_to, @input_from)
+                      .where(category: @input_what)
   end
-
-
 end

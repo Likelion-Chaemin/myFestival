@@ -14,11 +14,12 @@
 <nav class="level">
   <div class="level-left">
     <div class="level-item has-text-centered">
-        <a class="button is-orange"><span>가을</span></a>
+      <a class="button is-orange"><span><%= @input_from.mon %>월<%= @input_from.mday %>일 부터</span></a>
+      <a class="button is-orange"><span><%= @input_to.mon %>월<%= @input_to.mday %>일 부터</span></a>
         <p class="searchnav">에 즐기기 좋은 </p>
-        <a class="button is-orange">쿠알라룸푸르</a>
+        <a class="button is-orange"><%= @input_where %></a>
         <p class="searchnav">의 </p>
-        <a class="button is-orange">모든</a>
+        <a class="button is-orange"><%= @input_what %></a>
         <p>축제</p>
     </div>
   </div>
@@ -39,18 +40,20 @@
     <div class="column is-half is-offset-one-quarter">
       <div class="box">
         <div class="media">
-          <figure class="media-left">
-            <p class="image is-result">
-              <img src="http://bulma.io/images/placeholders/256x256.png" alt="Image">
-            </p>
-          </figure>
-          <div class="media-content">
-            <div class="content">
-              <p class="title is-3">축제 제목</p>
-              <p class="subtitle is-6">소개</p>
-              <p class="subtitle is-6">일시</p>
-              <p class="subtitle is-6">장소</p>
-              <p class="subtitle is-6">상세정보</p>
+          <% @result.each do |r| %>
+            <figure class="media-left">
+              <p class="image is-result">
+              <%= image_tag r.festival_photos.sample.image_url, class: 'fes_image'%>
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <p class="title is-3">축제 제목 : <%= r.title %></p>
+                <p class="subtitle is-6">소개 : <%= r.contact %></p>
+                <p class="subtitle is-6">일시 : <%= r.start_date %></p>
+                <p class="subtitle is-6">장소 : <%= r.address %></p>
+                <p class="subtitle is-6">상세정보 : <%= r.category %></p>
+          <% end %>
             </div>
           </div>
         </div>

@@ -11,6 +11,7 @@
 
     <script src="https://use.fontawesome.com/32624680fa.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
   </head>
@@ -23,17 +24,17 @@
           <div class="container">
             <!-- 네비게이션 바 왼쪽 start -->
             <div class="nav-left">
-              <a class="nav-item">
+              <a href="/homes/index" class="nav-item logo_img">
                 <%= image_tag 'logo2.png', class: :logo%>
               </a>
               <nav class="tabs">
                 <ul>
-                  <li><a href="#">국내</a></li>
-                  <li><a href="#">아시아</a></li>
-                  <li><a href="#">유럽</a></li>
-                  <li><a href="#">아메리카</a></li>
-                  <li><a href="#">오세아니아</a></li>
-                  <li><a href="#">아프리카</a></li>
+                  <li><a href="#" class="navbar_change_color">국내</a></li>
+                  <li><a href="#" class="navbar_change_color">아시아</a></li>
+                  <li><a href="#" class="navbar_change_color">유럽</a></li>
+                  <li><a href="#" class="navbar_change_color">아메리카</a></li>
+                  <li><a href="#" class="navbar_change_color">오세아니아</a></li>
+                  <li><a href="#" class="navbar_change_color">아프리카</a></li>
                 </ul>
               </nav>
             </div>
@@ -69,14 +70,10 @@
               </div>
             </div>
             <!-- 네비게이션바 오른쪽 end -->
-    
-    
-    
           </div>
-    
         </header>
         <!-- 네비게이션 바 end -->
-    
+
       </div>
     </section>
     <%= yield %>

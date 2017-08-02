@@ -1,78 +1,96 @@
-<form action="homes/search" method="post">
+<div id="startchange">
+</div>
+<form action="/homes/search" method="post">
   <div class="field field_search is-horizontal">
     <div class="container container_search">
       <div class="field-body">
 
         <!-- 언제부터 -->
           <div class="field">
-              <p class="control is-expanded has-icons-left">
+              <div class="control is-expanded has-icons-left">
                 <input class="input input_from datepicker" type="text" placeholder="언제부터" name="input_from">
                 <span class="icon is-small is-left">
                   <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                 </span>
-              </p>
+              </div>
             </div>
             <!-- 언제까지 -->
             <div class="field">
-              <p class="control is-expanded has-icons-left has-icons-right">
+              <div class="control is-expanded has-icons-left">
                 <input class="input input_to datepicker" type="text" placeholder="언제까지" name="input_to">
                 <span class="icon is-small is-left">
                   <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
                 </span>
-              </p>
+              </div>
             </div>
             <!-- 어디에서 -->
             <div class="field">
-              <p class="control is-expanded has-icons-left has-icons-right">
-                <input class="input input_where" type="text" placeholder="어디서" name="input_where">
+              <div class="control is-expanded has-icons-left">
+                <input class="input input_where" id='search_term' type="text" placeholder="어디서" name='input_where'>
                 <span class="icon is-small is-left">
                   <i class="fa fa-map-marker" aria-hidden="true"></i>
                 </span>
-              </p>
+              </div>
             </div>
             <!-- 어떤축제 -->
+            <input type="hidden" name="input_what" id="hid_field_input">
             <div class="field">
-              <p class="control is-expanded has-icons-left has-icons-right">
-                <select class="input input_what" name="input_what" >
-                  <option disabled selected hidden>
-                    <span class="icon is-small is-left">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
-                      어떤축제
-                    </span>
-                  </option>
-                  <option value="음악">음악</option>
-                  <option value="음식">음식</option>
-                  <option value="지역축제">지역축제</option>
-                  <option value="예술">예술</option>
-                  <option value="전통">전통</option>
-                </select>
+              <div class="control is-expanded has-icons-left">
+                <div class="dropdown select">
+                  <div class="icon is-small is-left">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                  </div>
+                  <div class="dropdown-trigger input input_what" id='evt-trigger-1'>
+                    <div class="button button_what"  id='evt-trigger-2'>
+                      <span id='evt-trigger-3'>어떤축제</span>
+                    </div>
+                  </div>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-content">
+                      <a class="dropdown-items">
+                        <span>전통축제</span>
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a class="dropdown-items">
+                        <span>음악</span>
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a class="dropdown-items">
+                        <span>음식</span>
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a class="dropdown-items">
+                        <span>기타</span>
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a class="dropdown-items">
+                        <span>지역문화</span>
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a class="dropdown-items">
+                        <span>여러</span>
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a class="dropdown-items">
+                        <span>축제</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
-              </p>
+
+
+              </div>
             </div>
 
-            <div class="field">
-              <p class="control">
+            <div class="field field_button">
+              <div class="control">
                 <button class="button is-info">
                   검색
                 </button>
-              </p>
+              </div>
           </div>
       </div>
     </div>
   </div>
 </form>
-
-<script type="text/javascript">
-//달력
-  $( function() {
-    $( ".datepicker" ).datepicker({onSelect : function(){
-      var from = $('.input_from').val();
-      var to = $('.input_to').val();
-
-      if (Date.parse(from) - Date.parse(to) > 0)
-        alert('날짜를 다시 선택해주세요');
-    }});
-  });
-
-
-</script>

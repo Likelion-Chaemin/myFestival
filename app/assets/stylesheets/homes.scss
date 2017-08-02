@@ -39,8 +39,9 @@
             ul{
               margin-left: 2rem;
               li{
-                a{
-                  color: #000 !important;
+                .navbar_change_color{
+                  color: #000;
+                  font-weight: 700;
                 }
               }
             }
@@ -54,9 +55,15 @@
             margin: 0 2rem 0 0;
           }
           .control{
-            .button{
-              background-color: #FFF;
-              border: 1px solid #aaa;
+            a{
+              .control{
+                .button{
+                  width: 46px;
+                  height: 36px;
+                  background-color: #FFF;
+                  border: 1px solid #aaa;
+                }
+              }
             }
           }
         }
@@ -87,6 +94,9 @@
     }
   }
 }
+
+
+
 form{
   height: 5.8vh;
   margin: 2rem 0 2rem 0;
@@ -98,9 +108,12 @@ form{
       .field-body{
         height: 100%;
         padding-left: 2px;
+        display: flex;
         .field{
+          flex: 3;
           margin: 0;
           height: 100%;
+          width: 100%;
           .control{
             height: 100%;
             .input{
@@ -108,20 +121,94 @@ form{
               border-radius: 0;
               box-shadow: none;
             }
+            .input:focus{
+              border-color: #EA3E3F;
+            }
+            .dropdown:hover{
+              .dropdown-content{
+                display: none;
+              }
+            }
+            .select{
+              z-index: 10;
+              width: 100%;
+              height: 100%;
+              border-radius: 0;
+              box-shadow: none;
+              .input_what{
+                .button{
+                  opacity: 1;
+                  padding: 0;
+                  margin: 0;
+                  color: #787878;
+
+                }
+              }
+              .dropdown-trigger{
+                .button{
+                  border: 0px;
+                  font-size: 1rem;
+                  color: #787878;
+                }
+                .button:hover{
+                  border: none;
+                  box-shadow: none;
+                }
+              }
+              .dropdown-trigger:hover{
+                border-color: #b5b5b5;
+              }
+              .dropdown-menu{
+                .dropdown-content{
+                  width: 100%;
+                  .dropdown-divider{
+                    margin: 0;
+                  }
+                  .dropdown-items{
+                    pointer-events: stroke;
+                    color: #333;
+                    span{
+                      display: block;
+                      text-align: center;
+                    }
+                  }
+                  .dropdown-items:hover{
+                    color: #EA3E3F;
+                  }
+                }
+              }
+            }
+            .select::after{
+              border: 1px solid #b5b5b5;
+              border-right: 0;
+              border-top: 0;
+            }
+            .select:hover::after{
+              border: 1px solid #787878;
+              border-right: 0;
+              border-top: 0;
+            }
+          }
+        }
+        .field_button{
+          flex: 2;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+          .control{
+            height: 100%;
             .button{
-              border-collapse: collapse;
+              border-radius: 0px;
               height: 100%;
               background-color: #EA3E3F;
               width: 100%;
             }
-
           }
         }
       }
     }
   }
 }
-
 
 .field_hot{
   height: 130vh;
@@ -168,7 +255,7 @@ form{
 }
 .button{
   font-size: 1.2rem;
-  font-family: 'NanumBarunGothic';  
+  font-family: 'NanumBarunGothic';
 }
 .is-orange{
   height: 45px;
@@ -198,7 +285,23 @@ form{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
+.columns{
+  .column{
+    .box{
+      .media{
+        .media-left{
+          .image{
+            .fes_image{
+              width: 250px;
+              height: 250px;
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // 폰트 import
 

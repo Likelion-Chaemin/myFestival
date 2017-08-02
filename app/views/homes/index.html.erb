@@ -6,3 +6,89 @@
   <%= render partial: "footer_review" %>
 
 </div>
+
+
+<script type="text/javascript">
+//달력
+  $( function() {
+    $( ".datepicker" ).datepicker({onSelect : function(){
+      var from = $('.input_from').val();
+      var to = $('.input_to').val();
+
+      if (Date.parse(from) - Date.parse(to) > 0)
+        alert('날짜를 다시 선택해주세요');
+    }});
+  });
+
+  $(document).ready(function(){
+     var scroll_start = 0;
+     var startchange = $('#startchange');
+     var offset = startchange.offset();
+      if (startchange.length){
+     $(document).scroll(function() {
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+        $('.hero-head').css('border-bottom', '1px solid #ccc');
+        }
+      else {
+        $('.hero-head').css('border-bottom', '0px');
+        }
+      });
+    }
+  });
+
+  $('.dropdown-toggle').dropdown()
+
+
+  function trigger(){
+    $('.dropdown-content').css('display', 'block');
+    $('.fa-globe').css('color', '#4a4a4a');
+    $('.select').css('border-color', '#EA3E3F');
+    $('.dropdown-trigger').css('border-color', '#EA3E3F')
+  };
+  function nontrigger(){
+    $('.dropdown-content').css('display', 'none');
+    $('.fa-globe').css('color', '#b5b5b5');
+    $('.dropdown-trigger').css('border-color', '#dbdbdb')
+  };
+
+
+  $('body').click(function(evt){
+    if (evt.target.id == "evt-trigger-1"){
+      return trigger()
+    }
+    else if (evt.target.id == "evt-trigger-2"){
+      return trigger()
+    }
+    else if (evt.target.id == "evt-trigger-3"){
+      return trigger()
+    }
+    else{
+      return nontrigger()
+    }
+  });
+
+
+
+  $(".dropdown-menu").on("click", "div a", function (event) {
+    event.preventDefault();
+    var clickedSubMenu = $(this);
+    var realText = clickedSubMenu.text();
+    $('.button_what').text(clickedSubMenu.text()); // <-- removes the caret icon
+    $('#hid_field_input').attr('value', realText);
+    $('.button_what').css('color', '#333');
+  });
+
+
+
+</script>
+
+<!-- 구글 장소 자동완성 시작-->
+<script>
+  function activatePlacesSearch(){
+    var input = document.getElementById("search_term");
+    var autocomplete = new google.maps.places.Autocomplete(input);
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQYfHb-tfDWP15B5-GG6jDWDFF-b14-JI&libraries=places&callback=activatePlacesSearch"></script>
+<!-- 구글 장소 자동완성 끝 -->
